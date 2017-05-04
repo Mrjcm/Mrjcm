@@ -2,9 +2,9 @@
 <html lang="en">
 <head>
 <meta http-equiv="Content-Type" content="text/tml; charset=utf-8"/>
-<title>黑色Html5响应式个人博客模板——主题《如影随形》</title>
+<title>欢迎来到我的个人博客</title>
 <meta name="keywords" content="个人博客模板,博客模板,响应式" />
-<meta name="description" content="如影随形主题的个人博客模板，神秘、俏皮。" />
+<meta name="description" content="个人博客模板，神秘、俏皮，简洁。" />
 <link href="css/base.css" rel="stylesheet">
 <link href="css/style.css" rel="stylesheet">
 <link href="css/media.css" rel="stylesheet">
@@ -19,22 +19,47 @@
     <h1>如影随形</h1>
     <h2>影子是一个会撒谎的精灵，它在虚空中流浪和等待被发现之间;在存在与不存在之间....</h2>
     <div class="logo"><a href="index.html"></a></div>
-    <nav id="topnav"><a href="index.html">首页</a><a href="about.html">关于我</a><a href="newlist.html">慢生活</a><a href="share.html">彩云之南</a><a href="new.html">搭建教程</a></nav>
+    <nav id="topnav"><a href="index.html">首页</a><a href="about.html">关于我</a><a href="newlist.html">技术分享</a><a href="share.html">彩云之南</a><a href="new.html">搭建教程</a></nav>
   </header>
   <article>
     <h2 class="about_h">您现在的位置是：<a href="/">首页</a>><a href="1/">彩云之南</a>><a href="1/">个人博客模板</a></h2>
     <div class="index_about">
-      <h2 class="c_titile">黑色Html5个人博客模板主题《如影随形》</h2>
-      <p class="box_c"><span class="d_time">发布时间：2014-04-17</span><span>编辑：杨青</span><span>浏览（390）</span><span>评论览（14）</span></p>
+      <h2 class="c_titile">如何在github上搭建自己的博客——git操作</h2>
+      <p class="box_c"><span class="d_time">发布时间：2017-05-04</span><span>编辑：Mrjcm</span><span>浏览（390）</span><span>评论览（14）</span></p>
       <ul class="infos">
-        <p>2014第二版黑色Html5个人博客模板主题《如影随形》，如精灵般的影子会给人一种神秘的感觉。一张剪影图黑白搭配，如果整个网站用黑白灰三色，会显得比较太过沉重，于是，在选择亮色方面，用以红为主色，蓝为辅色。这样就铺上了一些神秘甚至有些俏皮的元素。</p>
-        <p>如果你更喜欢用蓝色或者绿色，这也不错，替换关键的颜色值就行了，推荐颜色值：<img src="images/color.jpg" alt="黑色Html5个人博客模板"></p>
-        <p>Html5响应式两栏布局，LOGO重点突出，首页推荐文章列表以Logo中轴线为时间轴，鼠标Hover触发时间轴左侧栏显示文章发布时间，文字banner动画均以css3代码来实现效果。</p>
-        <p><b>首页效果图：</b></p>
-        <p><img src="images/xgt.jpg" alt="黑色Html5个人博客模板"></p>
-        <p><b>移动设备和平板电脑浏览效果：</b></p>
-        <p><img src="images/ltpic.jpg" alt="黑色Html5个人博客模板"></p>
-        <p><img src="images/col.jpg" alt="黑色Html5个人博客模板"></p>
+        <p>根据网上搜索资料结合这次自己搭建博客的经历，整理出来一点在git上面搭建博客的心得，在此与大家分享。希望大家能有所得。你需要准备git账号、一个本地静态的博客页面、Git bash(命令行工具)。接下来，只要按照步骤做下去的话，你也可以拥有一个自己的博客。</p>
+        <p>首先，你要有个GitHub账号(点击图片前往注册)<a href="https://github.com/"><img src="images/git.png" alt="github官网"></a></p>
+        <p>完成注册之后按照以下步骤</p>
+        <p><b>创建仓库：</b></p>
+        <p><img src="images/p1.png" alt="" style="width: 100%;"></p>
+        <p><img src="images/p2.jpg" alt="" style="width: 100%;"></p>
+        <p><b>完成后就会出现这个页面，点击设置</b></p>
+        <p><img src="images/p3.png" alt="黑色Html5个人博客模板"style="width: 100%;"></p>
+        <p><b>找到GitHub Pages，按图选择</b></p>
+        <p><img src="images/p4.png" alt="黑色Html5个人博客模板"style="width: 100%;"></p>
+        <p><b>点save保存,然后点击choose a theme随便选择一个主题</b></p>
+        <p><img src="images/p6.png" alt="黑色Html5个人博客模板"style="width: 100%;"></p>
+        <p><img src="images/p5.png" alt="黑色Html5个人博客模板"style="width: 100%;"></p>
+        <p><b>这时候就不用再管，而是在本地选择一个文件夹，准备将远程仓库克隆到本地。而在这个之前你要下载Git客户端(下载安装过程直接下一步就行)，然后打开gitbash</b></p>
+         <p><img src="images/p7.png" alt="黑色Html5个人博客模板"></p>
+         <p><b>因为Git是分布式版本控制系统，所以需要填写用户名和邮箱作为标识</b></p>
+         <p><img src="images/p9.png" alt="黑色Html5个人博客模板"></p>
+        <p><b>然后通过cd指令到达自己选择的文件夹</b></p>
+        <p><img src="images/p10.png" alt="黑色Html5个人博客模板"></p>
+        <p><b>然后输入指令(都只是输入第一行指令后按enter)，你就会发现本地你选择的文件夹中就出现了一个和仓库名同名的文件夹</b></p>
+        <p><img src="images/p11.jpg" alt="黑色Html5个人博客模板"></p>
+        <p><b>同理利用cd指令进入该文件夹</b></p>
+        <p><img src="images/p13.png" alt="黑色Html5个人博客模板"></p>
+        <p><b>然后将准备好的页面代码放入改文件夹中</b></p>
+        <p><img src="images/p12.png" alt="黑色Html5个人博客模板"></p>
+         <p><b>再次在输入指令(记住add后面是一个点，别忘了)</b></p>
+        <p><img src="images/p14.png" alt="黑色Html5个人博客模板"></p>
+        <p><b>然后输入</b></p>
+        <p><img src="images/p15.png" alt="黑色Html5个人博客模板"></p>
+        <p><b>这个指令之后会让你输入用户名和密码，输好之后等下就好了，然后进入git仓库，点击设置找到这个地方，如何上地址加上博客首页文件名就可以访问到了</b></p>
+        <p><img src="images/p17.png" alt="黑色Html5个人博客模板"></p>
+         <p><b>然后输入地址就可以访问了</b></p>
+         <p><img src="images/p18.png" alt="黑色Html5个人博客模板" style="width: 100%;"></p>
       </ul>
       <div class="keybq">
         <p><span>关键字词</span>：黑色,个人博客,时间轴,响应式</p>
@@ -144,13 +169,13 @@
         </ul>
       </h2>
     </div>
-    <div class="copyright">
+   <!--  <div class="copyright">
       <ul>
         <p> Design by <a href="/">DanceSmile</a></p>
         <p>蜀ICP备11002373号-1</p>
         </p>
       </ul>
-    </div>
+    </div> -->
   </aside>
   <script src="js/silder.js"></script>
   <div class="clear"></div>
