@@ -9,6 +9,7 @@
 <link href="css/index.css" rel="stylesheet">
 <link href="css/media.css" rel="stylesheet">
 <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0">
+<script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
 <!--[if lt IE 9]>
 <script src="js/modernizr.js"></script>
 <![endif]-->
@@ -17,15 +18,15 @@
 <div class="ibody">
   <header>
     <h1>天助自助</h1>
-    <h2>影子是一个会撒谎的精灵，它在虚空中流浪和等待被发现之间;在存在与不存在之间....</h2>
+    <h2>人生如茶，空杯以对，就有喝不完的好茶，装不完的欢喜和感动.....</h2>
     <div class="logo"><a href="index.html"></a></div>
     <nav id="topnav"><a href="index.html">首页</a><a href="about.html">关于我</a><a href="newlist.html">技术分享</a><a href="share.html">作品缩影</a><a href="new.html">搭建教程</a></nav>
   </header>
-  <article>
+  <article> 
     <div class="banner">
       <ul class="texts">
-        <p>The best life is use of willing attitude, a happy-go-lucky life. </p>
-        <p>最好的生活是用心甘情愿的态度，过随遇而安的生活。</p>
+        <p>You look at the eyes of the world, depends on the temperature on your face. </p>
+        <p>你看待世界的眼光，取决于你脸上的温度。</p>
       </ul>
     </div>
     <div class="bloglist">
@@ -54,21 +55,67 @@
         <div class="dateview">2014-02-19</div>
       </div>
       <div class="blogs">
-        <h3><a href="/">我的个人博客之——阿里云空间选择</a></h3>
+        <h3>如何解决跨域问题</h3>
         <figure><img src="images/03.png" ></figure>
         <ul>
-          <p>之前服务器放在电信机房， 联通用户访问速度很不稳定，经常出现访问速度慢的问题，换到阿里云解决了之前的问题。很多人都问我的博客选得什么空间，一年的费用得多少钱，今天我列个表出来，供大家参考。</p>
-          <a href="/" target="_blank" class="readmore">阅读全文&gt;&gt;</a>
+          <p>1.jsonp</br>
+            ajax请求，dataType为jsonp。这种形式需要请求在服务端调整为返回callback([json-object])的形式。如果服务端返回的是普通json对象。
+            那么调试的时候，在chrome浏览器的控制台会报"Uncaught SyntaxError: Unexpected token"错误；
+            在firefox浏览器的控制台会报"SyntaxError: missing ; before statement"错误。</p>
+         <!--  <p>2..iframe跨域</br>
+             页面中增加一个iframe元素，在需要调用get请求的时候，将iframe的src设置为get请求的url即可发起get请求的调用。</br>
+            复制代码 代码如下:</br>
+
+            var url = "http://xxx.xxx.xxx?p1=1&p2=2";
+            $("#iframe").attr("src", url);//跨域，使用iframe
+            iframe方式强于jsonp，除了可以处理http请求，还能够跨域实现js调用。</p>
+            <p>3.script元素的src属性处理</br>
+              iframe、img、style、script等元素的src属性可以直接向不同域请求资源，jsonp正是利用script标签跨域请求资源的简单实现，
+            所以这个和jsonp本质一样，同样需要服务端请求返回callback...形式。</br>
+          复制代码 代码如下:</br>
+
+          var url="http://xxx.xxx.xxx?p1=1";</br>
+          var script = document.createElement('script');</br>
+          script.setAttribute('src', url);</br>
+          document.getElementsByTagName('head')[0].appendChild(script);</p>
+           <p>4.在服务器使用get处理</br>
+              对于业务上没有硬性要求在前端处理的，可以在服务端做一次封装，再服务端发起调用，这样就可以解决跨域的问题。然后再根据请求是发出就完，还是需要获取返回值，来决定代码使用同步或者异步模式。
+              复制代码 代码如下:</br> private static void CreateGetHttpResponse(string url, int? timeout, string userAgent, CookieCollection cookies)
+        {</br>
+            if (string.IsNullOrEmpty(url))
+            {</br>
+                throw new ArgumentNullException("url");</br>
+            }</br>
+            var request = WebRequest.Create(url) as HttpWebRequest;</br>
+            request.Method = "GET";</br>
+            if (!string.IsNullOrEmpty(userAgent))
+            {</br>
+                request.UserAgent = userAgent;</br>
+            }</br>
+            if (timeout.HasValue)
+            {</br>
+                request.Timeout = timeout.Value;</br>
+            }</br>
+            if (cookies != null)
+            {</br>
+                request.CookieContainer = new CookieContainer();</br>
+                request.CookieContainer.Add(cookies);</br>
+            }</br>
+            request.BeginGetResponse(null,null);//异步</br>
+            //return request.GetResponse() as HttpWebResponse;</br>
+        }
+              </p> -->
+          <a href="###" target="_blank" class="readmore">阅读全文&gt;&gt;</a>
         </ul>
-        <p class="autor"><span>作者：杨青</span><span>分类：【<a href="/">网站建设</a>】</span><span>浏览（<a href="/">459</a>）</span><span>评论（<a href="/">30</a>）</span></p>
-        <div class="dateview">2014-01-18</div>
+        <p class="autor"><span>作者：Mrjcm</span><span>分类：【<a href="/">网站建设</a>】</span><span>浏览（<a href="###">459</a>）</span><span>评论（<a href="/">30</a>）</span></p>
+        <div class="dateview">2017-05-11</div>
       </div>
       <div class="blogs">
         <h3><a href="/">关于布局取类名的苦恼</a></h3>
         <figure><img src="images/04.jpg" ></figure>
         <ul>
-          <p>相信大家都有在命名时感觉不知道该取啥名的苦恼。今天给大家整理了下=>页头:header登录条:loginBar;标志:logo;侧栏:sideBar;广告:banner;导航:nav;子导航:subNav;菜单:menu;子菜单:subMenu;搜索:search滚动:scroll;页面主体:main;内容:content;标签页:tab;文章列表:list;提示信息:msg;小技巧:tips;栏目标题:title;友情链接:friendLink;页脚:footer;加入:joinus;指南:guild;服务:service;热点:hot;新闻:news;下载:download;注册:regsiter;状态:status;按钮:btn;投票:vote;合作伙伴:partner;版权:copyRight</p>
-          <a href="###" target="_blank" class="readmore">阅读全文&gt;&gt;</a>
+        <p>相信大家都有在命名时感觉不知道该取什么类名而苦恼。今天给大家整理了下</br>页头:header&nbsp;登录条:loginBar;&nbsp;标志:logo;&nbsp;侧栏:sideBar;&nbsp;广告:banner;&nbsp;导航:nav;&nbsp;子导航:subNav;&nbsp;菜单:menu;&nbsp;子菜单:subMenu;&nbsp;搜索:search;&nbsp;滚动:scroll;&nbsp;页面主体:main;&nbsp;内容:content;&nbsp;标签页:tab;&nbsp;文章列表:list;&nbsp;提示信息:msg;&nbsp;小技巧:tips;&nbsp;栏目标题:title;&nbsp;友情链接:friendLink;&nbsp;页脚:footer;&nbsp;加入:joinus;&nbsp;指南:guild;&nbsp;服务:service;&nbsp;热点:hot;&nbsp;新闻:news;&nbsp;下载:download;&nbsp;注册:regsiter;&nbsp;状态:status;&nbsp;按钮:btn;&nbsp;投票:vote;&nbsp;合作伙伴:partner;&nbsp;版权:copyRight</p>
+          <!-- <a href="###" target="_blank" class="readmore"></a> -->
         </ul>
         <p class="autor"><span>作者：Mrjcm</span><span>分类：【<a href="/">小技能</a>】</span><span>浏览（<a href="/">459</a>）</span><span>评论（<a href="/">30</a>）</span></p>
         <div class="dateview">2017-05-05</div>
@@ -89,8 +136,8 @@
   <aside>
     <div class="avatar"><a href="about.html"><span>关于Mrjcm</span></a></div>
     <div class="topspaceinfo">
-      <h1>执子之手，与子偕老</h1>
-      <p>于千万人之中，我遇见了我所遇见的人....</p>
+      <h1>愿得一人心，白首不相离。</h1>
+      <p>人生就是一个圆，从终点回到起点，能有幸一直陪伴到尽头的人是有缘的。从不相信爱无法相伴，也相信离开是爱的表现....</p>
     </div>
     <div class="about_c">
       <p>网名：逆苍</p>
@@ -133,7 +180,7 @@
         <p>友情链接</p>
       </h2>
       <ul>
-        <li><a href="https://github.com/Mrjcm/At-the-front">我的Git</a></li>
+        <li><a href="https://github.com/Mrjcm">我的Git</a></li>
         <!-- <li><a href="/">3DST技术社区</a></li> -->
       </ul>
     </div>
