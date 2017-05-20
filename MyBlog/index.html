@@ -31,45 +31,103 @@
     </div>
     <div class="bloglist">
       <h2>
-        <p><span>推荐</span>文章</p>
+        <p><span>推荐</span>内容</p>
       </h2>
       <!-- 文章列表开始 -->
       <div class="blogs">
-        <h3><a href="/">犯错了怎么办？</a></h3>
+        <h3><a href="/">如何给未知宽度的图片垂直居中对齐？</a></h3>
         <figure><img src="images/01.jpg" ></figure>
         <ul>
-          <p>看到昔日好友发了一篇日志《咎由自取》他说他是一个悲观者，感觉社会抛弃了他，脾气、性格在6年的时间里变化很大，很难适应这个社会。人生其实就是不断犯错的过程，在这个过程中不断的犯错，不断的吸取教训，不断的成长。也许日子里的惊涛骇浪，不过是人生中的水花摇晃，别用显微镜放大你的悲伤。</p>
-          <a href="/" target="_blank" class="readmore">阅读全文&gt;&gt;</a>
+          <p class="show"> 1.背景定位 background：url（../..pah）center centre no-repeat; 兼容性好 但是不利于动态导入图片.....</br>
+          </p>
+          <p class="hide">
+          2.给图片包裹一层元素，利用line-height
+             .wrap p{
+              width: 300px;
+              height: 300px;
+              line-height: 300px;
+              }
+              .wrap p img{
+                  *margin-top:expression((300 - this.height )/2);
+                  vertical-align: middle;
+              }
+              //兼容性较好
+            </p>
+              <p class="hide">
+               3.利用display:table_cell（不兼容ie6，7）
+              <pre class="hide">
+                .wrap{
+                  width: 300px;
+                  height: 200px;
+                  border: 1px dashed #ccc;
+                  display: table-cell;
+                  vertical-align: middle;
+                  text-align: center;
+              }
+              </pre>
+              </p>
+              <p class="hide">
+              4.添加table标签(兼容性好，但是冗余标签比较多)</br>
+              <textarea style="width:80%;height: 270px">
+          <div class="wrap">
+            <table>
+                <tr>
+                    <td align="center">
+                      <img src="../img/test.jpg"/>
+                    </td>
+                </tr>
+            </table>
+          </div>
+
+    .wrap{
+        width: 300px;
+        height: 200px;
+        border: 1px dashed #ccc;
+        text-align: center;
+    }
+    .wrap table{
+        width: 300px;
+        height: 200px;
+    }
+              </textarea>
+     </p>
+          <a href="###" target="_blank" class="readmore">阅读全文&gt;&gt;</a>
         </ul>
-        <p class="autor"><span>作者：杨青</span><span>分类：【<a href="/">日记</a>】</span><span>浏览（<a href="/">459</a>）</span><span>评论（<a href="/">30</a>）</span></p>
-        <div class="dateview">2014-04-08</div>
+        <p class="autor"><span>作者：Mrjcm</span><span>分类：【<a href="###">小技巧</a>】</span><span>浏览（<a href="###">459</a>）</span><span>评论（<a href="###">30</a>）</span></p>
+        <div class="dateview">2017-05-16</div>
       </div>
       <div class="blogs">
-        <h3><a href="/">个人博客模板（2014草根寻梦）</a></h3>
+        <h3><a href="###">TCP的三次握手</a></h3>
         <figure><img src="images/02.jpg" ></figure>
         <ul>
-          <p>2014第一版《草根寻梦》个人博客模板简单、优雅、稳重、大气、低调。专为年轻有志向却又低调的草根站长设计。模板采用html5+css3设计，nav导航实现鼠标悬停渐变显示英文标题的效果。banner部分，选择大图作为背景，利用css3中animation属性结合文字图片实现文字从左到右的渐变效果</p>
-          <a href="/" target="_blank" class="readmore">阅读全文&gt;&gt;</a>
+        <p class="show">所谓TCP的三次握手即建立tcp连接，就是指建立tcp连接时，需要客户端和服务端总共发送三个包确认连接的建立。</br>第一次握手：建立连接时,客户端发送syn包(syn=j)到服务器,并进入SYN_SEND状态,等待服务器确认；
+          SYN：同步序列编号(Synchronize Sequence Numbers)</br></p>
+          <p class="hide">
+          第二次握手：服务器收到syn包,必须确认客户的SYN（ack=j+1）,同时自己也发送一个SYN包（syn=k）,即SYN+ACK包,此时服务器进入SYN_RECV状态；</br>
+          第三次握手：客户端收到服务器的SYN＋ACK包,向服务器发送确认包ACK(ack=k+1),此包发送完毕,客户端和服务器进入ESTABLISHED状态,完成三次握手.</br>
+          完成三次握手,客户端与服务器开始传送数据。</br>其实就像是现实生活中相互打招呼一样(A:最近怎么样？B:还不错，你呢？A：也差不多。)接下来就是正式工作开始。
+          </p>
+          <a href="###" target="_blank" class="readmore">阅读全文&gt;&gt;</a>
         </ul>
-        <p class="autor"><span>作者：杨青</span><span>分类：【<a href="/">个人博客模板</a>】</span><span>浏览（<a href="/">459</a>）</span><span>评论（<a href="/">30</a>）</span></p>
-        <div class="dateview">2014-02-19</div>
+        <p class="autor"><span>作者：Mrjcm</span><span>分类：【<a href="###">网站建设</a>】</span><span>浏览（<a href="###">459</a>）</span><span>评论（<a href="###">30</a>）</span></p>
+        <div class="dateview">2017-05-16</div>
       </div>
       <div class="blogs">
         <h3>如何解决跨域问题</h3>
         <figure><img src="images/03.png" ></figure>
         <ul>
-          <p>1.jsonp</br>
+          <p class="show">1.jsonp</br>
             ajax请求，dataType为jsonp。这种形式需要请求在服务端调整为返回callback([json-object])的形式。如果服务端返回的是普通json对象。
             那么调试的时候，在chrome浏览器的控制台会报"Uncaught SyntaxError: Unexpected token"错误；
             在firefox浏览器的控制台会报"SyntaxError: missing ; before statement"错误。</p>
-          <p>2..iframe跨域</br>
+          <p class="hide">2..iframe跨域</br>
              页面中增加一个iframe元素，在需要调用get请求的时候，将iframe的src设置为get请求的url即可发起get请求的调用。</br>
             复制代码 代码如下:</br>
 
             var url = "http://xxx.xxx.xxx?p1=1&p2=2";
             $("#iframe").attr("src", url);//跨域，使用iframe
-            iframe方式强于jsonp，除了可以处理http请求，还能够跨域实现js调用。</p>
-            <!-- <p>3.script元素的src属性处理</br>
+            iframe方式强于jsonp，除了可以处理http请求，还能够跨域实现js调用。
+            3.script元素的src属性处理</br>
               iframe、img、style、script等元素的src属性可以直接向不同域请求资源，jsonp正是利用script标签跨域请求资源的简单实现，
             所以这个和jsonp本质一样，同样需要服务端请求返回callback...形式。</br>
           复制代码 代码如下:</br>
@@ -77,8 +135,8 @@
           var url="http://xxx.xxx.xxx?p1=1";</br>
           var script = document.createElement('script');</br>
           script.setAttribute('src', url);</br>
-          document.getElementsByTagName('head')[0].appendChild(script);</p>
-           <p>4.在服务器使用get处理</br>
+          document.getElementsByTagName('head')[0].appendChild(script);</br>
+           4.在服务器使用get处理</br>
               对于业务上没有硬性要求在前端处理的，可以在服务端做一次封装，再服务端发起调用，这样就可以解决跨域的问题。然后再根据请求是发出就完，还是需要获取返回值，来决定代码使用同步或者异步模式。
               复制代码 代码如下:</br> private static void CreateGetHttpResponse(string url, int? timeout, string userAgent, CookieCollection cookies)
         {</br>
@@ -104,10 +162,10 @@
             request.BeginGetResponse(null,null);//异步</br>
             //return request.GetResponse() as HttpWebResponse;</br>
         }
-              </p> -->
+              </p>
           <a href="###" target="_blank" class="readmore">阅读全文&gt;&gt;</a>
         </ul>
-        <p class="autor"><span>作者：Mrjcm</span><span>分类：【<a href="/">网站建设</a>】</span><span>浏览（<a href="###">459</a>）</span><span>评论（<a href="/">30</a>）</span></p>
+        <p class="autor"><span>作者：Mrjcm</span><span>分类：【<a href="###">网站建设</a>】</span><span>浏览（<a href="###">459</a>）</span><span>评论（<a href="/">30</a>）</span></p>
         <div class="dateview">2017-05-11</div>
       </div>
       <div class="blogs">
