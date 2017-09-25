@@ -76,9 +76,9 @@ opacity:1;
 .bloglist h2 p { background: #474645; width: 180px; color: #fff; text-align: center; box-shadow: #999 4px 5px 1px; }
 .bloglist h2 p span { color: #38b3d4; }
 .blogs { margin: 0 20px 20px 20px; position: relative; }
-.blogs h3 { font-size: 14px; font-weight: bold; margin-bottom: 15px; transition: all .5s }
+.blogs h3 { font-size: 14px; font-weight: bold; margin-bottom: 15px; transition: all .5s ;}
 .blogs h3 a { color: #474645; }
-.blogs h3:hover { text-decoration: underline }
+.blogs h3:hover { text-decoration: underline ;}
 .blogs figure { float: left; width: 25%; overflow: hidden; }
 .blogs figure img { width: 100%; margin: auto; -moz-transition: all 0.5s; -webkit-transition: all 0.5s; -o-transition: all 0.5s; transition: all 0.5s; }
 .blogs figure:hover img { -moz-transform: scale(1.1); -webkit-transform: scale(1.1); -o-transform: scale(1.1); -ms-transform: scale(1.1); }
@@ -87,7 +87,7 @@ opacity:1;
 .autor { overflow: hidden; clear: both; margin: 10px 0 0 0; display: inline-block; line-height: 26px; height: 26px; color: #838383; background: #f6f6f6; width: 100% }
 .autor span { margin: 0 10px; }
 .autor span a { color: #759b08; }
-a.readmore { background: #e41635; color: #fff; padding: 5px 10px; float: right; margin: 20px 0 0 0 }
+a.readmore { background: #e41635; color: #fff; padding: 5px 10px; float: right; margin: 20px 0 0 0 ;}
 span.readmore{background: #e41635; color: #fff;padding: 5px 10px;float: right;margin: 20px 0 0 0;}
 .blogs::before { content: ""; width: 10px; height: 10px; border-radius: 50%; position: absolute; background: #cac1c1; border: 2px solid #fff; left: -27px; -webkit-transition: all 1s; -moz-transition: all 1s; -o-transition: all 1s; transition: all 1s; }
 .blogs:hover::before { background: #474645 }
@@ -104,23 +104,23 @@ span.readmore{background: #e41635; color: #fff;padding: 5px 10px;float: right;ma
 .about_c { margin: 10px 0; color: #fff; line-height: 26px; }
 .about_c p:first-child, .about_c p:nth-child(2), .about_c p:nth-child(3), .about_c p:nth-child(4), .about_c p:last-child { background: url(../images/about_c.png) no-repeat; }
 .about_c p:first-child { background-position: 15px 6px; }
-.about_c p:nth-child(2) { background-position: 15px -20px }
-.about_c p:nth-child(3) { background-position: 15px -48px }
-.about_c p:nth-child(4) { background-position: 15px -70px }
-.about_c p:last-child { background-position: 15px -97px }
+.about_c p:nth-child(2) { background-position: 15px -20px ;}
+.about_c p:nth-child(3) { background-position: 15px -48px ;}
+.about_c p:nth-child(4) { background-position: 15px -70px ;}
+.about_c p:last-child { background-position: 15px -97px ;}
 .about_c p { display: block; padding-left: 40px; }
 .about_c p:hover { background: #222 }
 .bdsharebuttonbox { margin: 20px; clear: both; }/* 百度分享 */
 /* 右侧推荐信息列表 */
 .tj_news h2, .links h2 { font-size: 16px; font-family: "Microsoft Yahei", Arial, Helvetica, sans-serif; color: #FFF; }
 .tj_news h2 p, .links h2 p { height: 40px; line-height: 40px; width: 100px; padding: 0 0 0 30px; border-radius: 0 20px 20px 0; text-shadow: rgba(0,0,0,.65) 1px 1px; }
-.tj_t1 { background: #0f9c7c }
-.tj_t2 { background: #b0e516 }
-.tj_news ul { margin: 20px 0 20px 20px }
-.tj_news ul li a:hover, .links ul li a:hover { text-decoration: underline; color: #FFF }
+.tj_t1 { background: #0f9c7c ;}
+.tj_t2 { background: #b0e516 ;}
+.tj_news ul { margin: 20px 0 20px 20px ;}
+.tj_news ul li a:hover, .links ul li a:hover { text-decoration: underline; color: #FFF ;}
 .tj_news ul li { height: 25px; line-height: 25px; clear: both; padding-left: 5px; overflow: hidden; padding-left: 15px; background: url(../images/li.jpg) no-repeat left center; }
 .tj_news ul li a, .links ul li a { color: #bbbbbb; }
 /* 友情链接 */
-.links h2 p { background: #222 }
-.links ul { margin: 20px 0 }
+.links h2 p { background: #222 ;}
+.links ul { margin: 20px 0 ;}
 .links ul li { height: 30px; line-height: 30px; text-align: center; border-bottom: #333 1px dashed; margin: 0 40px; }
